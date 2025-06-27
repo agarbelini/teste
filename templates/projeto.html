@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ projeto.nome }}</title>
+</head>
+<body>
+    <h1>{{ projeto.nome }}</h1>
+    <p>{{ projeto.descricao }}</p>
+    <h2>Atividades</h2>
+    <ul>
+        {% for atividade in atividades %}
+        <li>{{ atividade.titulo }} - {{ atividade.status }}
+            {% if atividade.status != 'Concluída' %}
+                <a href="{{ url_for('concluir_atividade', id=atividade.id) }}">Concluir</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>
