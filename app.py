@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = 'chave_secreta_segura'
+app.secret_key = 'ccbeu@4812'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:ccbeu%404812@localhost/planejamento'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
